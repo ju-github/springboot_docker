@@ -1,0 +1,24 @@
+spring:
+  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+    #MySQL配置
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.18.130:3306/gulimall_wms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 614729
+    druid:
+      max-active: 200
+  cloud:
+    nacos:
+      discovery:
+        access-key: 127.0.0.1:8848
+  application:
+    name: gulimall_ware
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 8005
