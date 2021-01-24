@@ -11,7 +11,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        access-addr: 127.0.0.0:8848
+        access-addr: 127.0.0.1:8848
   application:
     name: gulimall-product
 mybatis-plus:
