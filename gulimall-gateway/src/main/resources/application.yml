@@ -14,10 +14,20 @@ spring:
 #       filters:
 #          - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
 
+#     商品
+      - id: product_route
+        uri: lb://gulimall-product
+        predicates:
+          - Path=/api/product/**
+        filters:
+          - RewritePath=/api/(?<segment>.*),/$\{segment}
 
+#      人人后台
       - id: admin_route
         uri: lb://renren-fast
         predicates:
           - Path=/api/**
         filters:
           - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+
